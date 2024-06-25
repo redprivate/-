@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+
+    setInterval(() => {
+      let color = "#";
+
+      for (let i = 0; i < 6; i++) {
+        color += hexValues[Math.floor(Math.random() * hexValues.length)]
+      }
+
+      document.body.style.backgroundColor = color;
+    }, 10);
+  </script>
+</body>
+</html>
